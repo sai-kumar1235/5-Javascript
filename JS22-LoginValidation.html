@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>LoginPage</h1>
+    <form action="../3-HTML5/WebProject-3-218b1a4452/loginsuccess.html" onsubmit="return submitValidate(this)">
+    Username: <input type="text" name="uname" id="uname" onblur="unamevalidate()"><br>
+    <p id="unamep"></p>
+    Password:  <input type="password" name="pass" id="password" onblur="passvalidate()">
+    <p id="pname"></p>
+    <input type="submit" >
+    <script>
+        
+        function submitValidate(){
+            
+            var pass=document.getElementById("password");
+            if (pass.value.length<6 || pass.value===null || pass.value===""){
+            document.getElementById("pname").innerText="Invalid password";
+            return false;
+            }
+            var user=document.getElementById("uname");
+            console.log(user.innerText);
+            if (user.value.length<6   || user.value===null ||user.value===""){
+            document.getElementById("unamep").innerText="Invalid username";
+            return false;
+            }
+        return true;
+        }
+    </script>
+</form>
+</body>
+</html>                                                                                                                                                                                                                                        
